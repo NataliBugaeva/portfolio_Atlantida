@@ -1,0 +1,47 @@
+.blog_nast {
+    width: 100%;
+    display: flex;
+    margin: 30px 0;
+}
+
+.blog_nast_osnova {
+    min-width: 320px;
+    flex-shrink: 1;
+}
+
+.statia_nov {
+    width: 100%;
+    margin-bottom: 10px;
+
+    p {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    &:hover img {
+        opacity: 1;
+    }
+}
+
+.statia_nov_img {
+    max-width: 100%;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: black;
+
+    img {
+        display: block;
+        flex-shrink: 0;
+        opacity: .8;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .blog_nast {
+        flex-direction: column;
+    }
+
+}

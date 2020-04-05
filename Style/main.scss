@@ -1,0 +1,23 @@
+@import 'Helpers/var';
+@import 'Helpers/scaffolding';
+@import 'Helpers/mixin';
+
+@import 'Components/Button/button';
+@import 'Components/Header/Navigation/navigation';
+@import 'Components/Header/Fon/header_fon';
+@import 'Components/Burger/burger';
+
+@import 'Components/Glavnaia/onas';
+@import 'Components/Glavnaia/komanda';
+@import 'Components/Glavnaia/yslygi';
+@import 'Components/Glavnaia/portfolio';
+@import 'Components/Glavnaia/etapi_raboti';
+@import 'Components/Glavnaia/ceni';
+@import 'Components/Slaid/slaider';
+
+@import 'Components/Footer/footer';
+
+@import 'Components/Blog_nast/blog_nast';
+@import 'Components/Blog_arxiv/bl_arx_osn';
+@import 'Components/Page/page';
+@import 'Components/Sidebar/sidebar';

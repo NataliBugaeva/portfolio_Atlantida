@@ -1,0 +1,79 @@
+/*ОСН ИНФА*/
+
+
+.o_nas {
+
+    position: relative;
+    width: 100%;
+ @include flex(flex,row,center,flex-start,nowrap);
+   
+
+    &_img {
+        @include kards_faces();
+        opacity: .3;
+        z-index: -1;
+        /*
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border: 1px solid blue;
+        */
+        
+        img {
+            display: block;
+            @include img_razm (block,100%,100%);
+        }
+    }
+
+}
+
+.cent_o_nas {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+.nasha_rabota,
+.missia {
+    width: 45%;
+}
+
+
+.nasha_rabota p,
+.missia p {
+    @include fonts(20px,500,1.5em);
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .nasha_rabota,
+.missia {
+    width: 48%;
+}
+
+
+.nasha_rabota p,
+.missia p {
+    @include fonts(16px,500,1.5em);
+    margin-top: 20px;
+}
+}
+@media screen and (max-width: 650px) {
+    .cent_o_nas {
+        flex-direction: column;
+    }
+    .nasha_rabota,
+    .missia {
+        width: 100%;
+    }
+
+    .nasha_rabota p,
+.missia p {
+    @include fonts(16px,500,1.4em);
+    margin-top: 20px;
+}
+}

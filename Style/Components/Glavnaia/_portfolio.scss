@@ -1,0 +1,160 @@
+/*ПОРТФОЛИО*/
+
+.portfolio {
+    width: 100%;
+    @include flex(flex, row, center, flex-start, wrap);
+}
+
+.rabota {
+    position: relative;
+    overflow: hidden;
+    width: 20%;
+    height: 350px;
+    background-color: $bg_col_ysl;
+    @include flex(flex, row, center, flex-end, nowrap);
+
+    p {
+        text-align: center;
+        color: $color_kards;
+        @include fonts (20px, 500, 1.3em);
+    }
+
+    p:hover {
+        font-weight: 600;
+    }
+
+    &:hover .portfolio_img {
+        transform: translateY(-60px);
+        transition-duration: .5s;
+    }
+
+    &:hover img {
+        opacity: .7;
+    }
+}
+
+
+.portfolio_img {
+    @include kards_faces();
+    @include flex(flex, row, center, center, nowrap);
+    transition-duration: .5s;
+
+    &+p+input {
+        display: none;
+    }
+
+    img {
+        @include img_razm (block, 100%, 100%);
+    }
+}
+
+.okno {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg_col_okno;
+    z-index: -1;
+    transition: 1s;
+    transform: scale(0);
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    @include flex(flex, row, center, center, nowrap);
+}
+
+.form {
+    position: relative;
+    background-color: $dop_bg_color;
+    width: 30%;
+    height: 80%;
+    @include flex(flex, row, center, center, nowrap);
+
+    img {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        display: block;
+        top: -13px;
+        right: -13px;
+    }
+
+}
+
+.form_img {
+    @include background_img(100%,90%,50%,contain,no-repeat);
+    background-image: url("/Images/Glavnaya/Portfolio/s1.jpg");
+}
+
+#check:checked+.okno {
+    z-index: 1;
+    transform: scale(1);
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1400px){
+    .form {
+        width: 50%;
+        height: 80%;
+    }
+    .form_img {
+        width: 90%;
+    }
+}
+    
+@media screen and (max-width: 1000px){
+    .form {
+        width: 60%;
+        height: 85%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .form {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .form {
+        width: 90%;
+    }
+    .form_img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .rabota {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .rabota {
+        width: 30%;
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .rabota {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .rabota {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .rabota {
+        width: 80%;
+    }
+}

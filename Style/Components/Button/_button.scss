@@ -1,0 +1,75 @@
+
+.button
+{
+    text-transform: uppercase;
+    width: 135px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        rect {
+            stroke: red;
+            stroke-width: 1;
+            transition: .8s;
+            stroke-dasharray: 400, 0;
+        }
+    }
+
+    &:hover svg rect {
+        stroke-width: 3;
+        stroke-dasharray: 40, 245;
+        stroke-dashoffset: 62;
+    }
+
+    &:hover  {
+       background-color: #1C1C1C;
+       color: red;
+    }
+}
+
+
+.button_blog
+{
+    text-transform: uppercase;
+    width: 135px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background-color: #D8D8D8;
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        rect {
+            stroke:grey;
+            stroke-width: 1;
+            transition: .8s;
+            stroke-dasharray: 400, 0;
+        }
+    }
+
+    &:hover svg rect {
+        stroke-width: 3;
+        stroke-dasharray: 40, 245;
+        stroke-dashoffset: 62;
+    }
+
+    &:hover  {
+       background-color:  #D8D8D8;
+       color: red;
+    }
+}

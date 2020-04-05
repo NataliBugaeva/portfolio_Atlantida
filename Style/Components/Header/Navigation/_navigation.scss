@@ -1,0 +1,186 @@
+/*Это блок header навигация*/
+
+.header_bel {
+    
+    width: 100%;
+    background-color: white;
+    color: grey;
+   
+  
+}
+
+.header_nav {
+    
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+}
+
+.nav_logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    
+
+    p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 18px;
+    }
+}
+
+.nav_link_blog_n a {
+    display: block;
+        text-decoration: none;
+        color: grey;
+        font-weight: 400;
+        font-size: 12px;
+        margin-right: 20px;
+}
+
+.nav_link_blog_n  {
+    width: 60%;
+    @include flex(flex,row,center,center,nowrap);
+}
+
+.nav_link {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: grey;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    a:hover{
+        
+        font-size: 14px;
+    }
+}
+
+.nav_icon {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.peregorodka_nav {
+    width: 1px;
+    height: 15px;
+    background-color: grey;
+    margin: 0 4px;
+}
+
+.twit {
+    @include icons_h_f();
+    background-image: url("/Images/Tweter.png");
+}
+
+.face {
+    @include icons_h_f();
+    background-image: url("/Images/Facebook.png");
+}
+
+.beh {
+    @include icons_h_f();
+    background-image: url("/Images/Behance.png");
+}
+
+.logo {
+    width: 45px;
+    height: 33px;
+    background-image: url("/Images/logo.png");
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    margin-right: 5%;
+    flex-shrink: 0;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+    .nav_link {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        a {
+            width: 33.33%;
+            text-align: center;
+        }
+
+
+        a:nth-child(n) {
+            margin-bottom: 15px;
+        }
+
+        a:nth-child(n+7) {
+            margin-bottom: 0;
+        }
+    }
+
+    
+}
+
+@media screen and (max-width: 810px) {
+
+    .header_nav {
+        flex-direction: column;
+    }
+
+    .nav_link {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 5% 0;
+    
+
+        a {
+            width: 26%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    .nav_logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav_icon {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo {
+        margin-right: 1%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav_link {
+        display: none;
+    }
+
+    .nav_logo,
+    .nav_icon {
+        justify-content: flex-start;
+    }
+
+    .nav_logo {
+        margin: 0 0 20px 5px;
+    }
+
+    .nav_icon {
+        margin-left: 5px;
+        margin-bottom: 20px;
+    }
+}

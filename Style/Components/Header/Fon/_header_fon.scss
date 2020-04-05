@@ -1,0 +1,46 @@
+/*Это блок header с картинкой*/
+
+.header_img {
+    
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    background-color: #2E2E2E;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.h_img {
+    position: absolute;
+    opacity: .3;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /*
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    */
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.header_cent {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,57 @@
+﻿
+@font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 700;
+    src: url("/Fonts/Caveat/Caveat-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/Fonts/Caveat/Caveat-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    src: url("Poiret_One/PoiretOne-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/Fonts/Tenor_Sans/TenorSans-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    src: url("/Fonts/Raleway/Raleway-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url("/Fonts/Comfortaa/Comfortaa-Light.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: url("/Fonts/Montserrat/Montserrat-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url("/Fonts/Montserrat/Montserrat-Bold.ttf") format('truetype');
+}

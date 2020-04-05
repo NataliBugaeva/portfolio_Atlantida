@@ -1,0 +1,78 @@
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-slide {
+    @include flex(flex,row,center,center,nowrap);
+padding: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none;
+}
+
+.slaid {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    @include flex(flex,row,center,center,nowrap);
+
+    &_img {
+        @include kards_faces();
+        z-index: -1;
+        opacity: .6;
+        overflow: hidden;
+
+        img {
+            @include img_razm (block,100%,100%);
+        }
+    }
+}
+
+.slide_img_1 {
+   @include klient();
+    background-image: url('/Images/Logo/барбер1.jpg'); 
+}
+.slide_img_2 {
+    @include klient();
+     background-image: url('/Images/Logo/барбер2.jpg'); 
+ }
+ .slide_img_3 {
+    @include klient();
+     background-image: url('/Images/Logo/барбер3.jpg'); 
+ }
+ .slide_img_4 {
+    @include klient();
+     background-image: url('/Images/Logo/бокс.jpg'); 
+ }
+ .slide_img_5 {
+    @include klient();
+     background-image: url('/Images/Logo/велик.jpg'); 
+ }
+ .slide_img_6 {
+    @include klient();
+     background-image: url('/Images/Logo/зал1.jpg'); 
+ }
+ .slide_img_7 {
+    @include klient();
+     background-image: url('/Images/Logo/зал2.jpg'); 
+ }
+ .slide_img_8 {
+    @include klient();
+     background-image: url('/Images/Logo/магаз.jpg'); 
+ }
+ .slide_img_9 {
+    @include klient();
+     background-image: url('/Images/Logo/одежда.jpg'); 
+ }
+ .slide_img_10 {
+    @include klient();
+     background-image: url('/Images/Logo/подарки.png'); 
+ }
+
+ .swiper-scrollbar {
+     display: none;
+ }
+
+

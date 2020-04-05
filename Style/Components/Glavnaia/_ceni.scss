@@ -1,0 +1,96 @@
+/*ЦЕНЫ*/
+
+.ceny {
+    position: relative;
+    width: 100%;
+  @include flex(flex,row,center,flex-start,nowrap); 
+
+
+    &_img {
+       @include kards_faces();
+        z-index: -1;
+        opacity: .4;
+        overflow: hidden;
+
+        img {
+            @include img_razm (block,100%,100%);
+        }
+    }
+}
+ 
+.ceny .cent {
+    margin: 30px 0;
+}
+
+.ceny_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ceny_bl {
+    width: 30%;
+    background-color: rgba(255, 255, 255, .7);
+    @include fonts(16px,500,1.7em);
+    @include flex(flex,column,flex-start,center,nowrap);
+
+    & h3 {
+        margin: 15px 0;
+    }
+
+    & ul {
+        margin-bottom: 20px;
+        color: $color_osn_text;
+    }
+
+    & ul>li::before {
+        content: '';
+        display: inline-block;
+        @include background_img(15px,15px,50%,cover,no-repeat);
+        margin-right: 10px;
+        background-image: url("/Images/Glavnaya/Ceni/galka.png");   
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    
+    }
+}
+
+.ceny_p {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .6);
+@include fonts(16px,500,1.5em);   
+    color: $color_osn_text;
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 950px) {
+    .ceny_bl {
+        @include fonts(13px,500,1.5em);
+    }
+    .ceny_p {
+        @include fonts(13px,500,1.5em); 
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .ceny_bl {
+        width: 60%;
+        margin-bottom: 30px;
+    }
+
+    .ceny_flex {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ceny_bl {
+        width: 80%;
+    }
+}
+

@@ -1,0 +1,177 @@
+/*ЭТАПЫ РАБОТЫ*/
+
+.fon3 {
+    @include flex(flex, row, center, center, nowrap);
+    position: relative;
+    width: 100%;
+    height: 900px;
+
+    &_img {
+        @include kards_faces();
+        z-index: -1;
+        opacity: .5;
+        overflow: hidden;
+
+        img {
+            @include img_razm (block,100%,100%);
+        }
+    }
+
+}
+
+
+.ul {
+    @include fonts(20px, 500, 1);
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+
+    input {
+        display: none;
+
+        &+p {
+            margin-top: 7px;
+        }
+    }
+
+}
+
+.ul1,
+.ul2,
+.block_centr {
+    width: 33.33%;
+    min-width: 200px;
+    position: relative;
+}
+
+
+.img_ul_1 {
+    @include etapi_icons(80px, 80px);
+    background-image: url("/Images/Glavnaya/Etapi_rab/znak.png");
+}
+
+.img_ul_2 {
+    @include etapi_icons(80px, 80px);
+    background-image: url("/Images/Glavnaya/Etapi_rab/plan.png");
+}
+
+.img_ul_3 {
+    @include etapi_icons(80px, 80px);
+    background-image: url("/Images/Glavnaya/Etapi_rab/dis.png");
+}
+
+.img_ul_4 {
+    @include etapi_icons(80px, 80px);
+    background-image: url("/Images/Glavnaya/Etapi_rab/razr.png");
+}
+
+.img_ul_5 {
+    @include etapi_icons(80px, 80px);
+    background-image: url("/Images/Glavnaya/Etapi_rab/zap.png");
+}
+
+.img_ul_6 {
+    @include etapi_icons(80px, 80px);
+    background-image: url("/Images/Glavnaya/Etapi_rab/prod.png");
+}
+
+.ul1>li,
+.ul2>li {
+    width: 100%;
+    height: 33.33%;
+    @include flex(flex, column, center, center, nowrap);
+}
+
+.vloz {
+    @include vloz_ul(100%, 0);
+    @include fonts(20px, 500, 2em);
+}
+
+.vloz_2 {
+    @include vloz_ul(-100%, 0);
+    @include fonts(20px, 500, 2em);
+}
+
+.vloz_2 li,
+.vloz li {
+    width: 100%;
+    height: 100%;
+}
+
+#check2:checked+p+ul,
+#check3:checked+p+ul,
+#check4:checked+p+ul,
+#check5:checked+p+ul,
+#check6:checked+p+ul,
+#check7:checked+p+ul {
+    display: block;
+}
+
+.img_ul_1:hover,
+.img_ul_2:hover,
+.img_ul_3:hover,
+.img_ul_4:hover,
+.img_ul_5:hover,
+.img_ul_6:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 900px) {
+
+    .vloz,
+    .vloz_2,
+    .ul {
+        @include fonts(16px, 500, 1.8em);
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .img_ul_1,
+    .img_ul_2,
+    .img_ul_3,
+    .img_ul_4,
+    .img_ul_5,
+    .img_ul_6 {
+        @include etapi_icons(40px, 40px);
+    }
+
+    .ul {
+        @include fonts(13px, 500, 1);
+        flex-direction: column;
+        width: 100%;
+        height: 600px;
+        padding: 5px;
+    }
+
+    .fon3 {
+        @include flex(flex, column, flex-start, center, wrap);
+        height: 700px;
+    }
+
+    .vloz {
+        width: 200%;
+        @include fonts(14px, 500, 1.6em);
+    }
+
+    .vloz_2 {
+        @include vloz_ul(100%, -100%);
+        width: 200%;
+        @include fonts(14px, 500, 1.6em);
+    }
+
+    .ul1 li,
+    .ul2 li {
+        margin-bottom: 10px;
+    }
+
+    .ul1,
+    .ul2 {
+        min-width: 100px;
+    }
+
+    .ul2 {
+        margin-top: 30px;
+    }
+}
